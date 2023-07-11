@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import { useSession } from 'next-auth/react'
 import Col from 'react-bootstrap/Col'
 import Row from 'react-bootstrap/Row'
 import Tabs from 'react-bootstrap/Tabs'
@@ -12,14 +11,12 @@ import Bars from '../components/Bars'
 import History from '../components/History'
 import Detail from '../components/Detail'
 import useScreen from '../constants/useScreen'
+import data from '../constants/sample-data.json'
 
 export default function index() {
-  const { data: session, status } = useSession()
   const [key, setKey] = useState('history')
   let screen = useScreen()
   if (!screen) screen = 'medium'
-  const { data, error, mutate } = useSWR('/api/statement')
-  if (isLoad(session, status, true)) return <Load msg='Please reload the page' />
 
   return (
     <>
@@ -43,10 +40,10 @@ export default function index() {
           className="mt-2"
         >
           <Tab eventKey="history" title="History">
-            <History data={data} mutate={mutate} session={session} />
+            <History data={data} />
           </Tab>
           <Tab eventKey="detail" title="Detail">
-            <Detail data={data} mutate={mutate} session={session} screen={screen} />
+            <Detail data={data} screen={screen} />
           </Tab>
         </Tabs>
       </>

@@ -6,14 +6,12 @@ import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 import Row from 'react-bootstrap/Row'
 import { useRouter } from 'next/router'
-import { signIn, useSession } from 'next-auth/react'
 import { Load } from '../../components/Load'
 import Toast from '../../components/Toast'
 
 export default function Signup() {
   const [password, setPassword] = useState('')
   const [submitting, setSubmitting] = useState(false)
-  const { data: session, status } = useSession()
   const [success, setSuccess] = useState(false)
   const [show, setShow] = useState(false)
   const [allow, setAllow] = useState(false)
@@ -34,45 +32,10 @@ export default function Signup() {
       })
       return
     } 
-    setSubmitting(true)
+    // setSubmitting(true)
     // console.log(data)
-      bcrypt.hash(data.password, 10, (err, hash) => {
-        fetch('/api/user', 
-          { 
-            method: 'POST', 
-            body: JSON.stringify({
-              email: data.email,
-              password: hash,
-              alias: data.alias
-            }) 
-          }
-        )
-          .then((res) => {
-            // console.log('success', res.data)
-            setSuccess(true)
-            signIn('credentials', {
-              email: data.email,
-              password: data.password,
-              callbackUrl: ''
-            })
-          })
-          .catch((err) => {
-            if (!err.response.data.msg) {
-              console.error(err)
-              return
-            }
-            console.error(err.response.data.msg)
-            if (err.response.data.msg.includes('already exists')) {
-              setShow(true)
-            } else if (err.response.data.msg.includes('Email not on allow list')) {
-              setAllow(true)
-            }
-          })
-        .finally(() => setSubmitting(false))
-      })
+    alert('sample environment, auth is unecessary')
   }
-
-  if (session) router.push('/')
 
   return (
     <>

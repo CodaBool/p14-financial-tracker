@@ -1,7 +1,6 @@
 import Head from 'next/head'
 import Navigation from '../components/Navigation'
 import Container from 'react-bootstrap/Container'
-import { SessionProvider } from 'next-auth/react'
 import { SWRConfig } from 'swr'
 
 import '../styles/globals.css'
@@ -13,7 +12,7 @@ const config = {
 
 export default function App({ Component, pageProps }) {
   return (
-    <SessionProvider session={pageProps.session} refetchInterval={5 * 60}>
+    <>
       <Head>
         <title>Finance Tracking</title>
         <meta charSet="UTF-8" />
@@ -30,6 +29,6 @@ export default function App({ Component, pageProps }) {
           </Container>
         </main>
       </SWRConfig>
-    </SessionProvider>
+    </>
   )
 }

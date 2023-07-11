@@ -9,7 +9,7 @@ import DateInput from './DateInput'
 import { rtf } from '../constants'
 import "react-day-picker/dist/style.css"
 
-export default function History({ data, mutate, session}) {
+export default function History({ data}) {
   const { register, handleSubmit, formState: { errors }, reset, setError, setValue } = useForm()
   const [readable, setReadable] = useState(false)
   const [recent, setRecent] = useState()
@@ -17,8 +17,6 @@ export default function History({ data, mutate, session}) {
   const [admin, setAdmin] = useState()
   const [spin, setSpin] = useState()
   const [edit, setEdit] = useState()
-
-  useEffect(() => setAdmin(session?.user.email === 'codabool@pm.me'), [session])
 
   useEffect(() =>  {
     if (!data?.raw) {
@@ -47,13 +45,7 @@ export default function History({ data, mutate, session}) {
   }, [edit])
 
   function remove(id) {
-    fetch(`/api/statement?${new URLSearchParams({id})}`,
-      { method: 'DELETE' }
-    )
-      .then(() => mutate())
-      .catch(err => {
-        console.error(err.response.data.msg)
-      })
+    alert("sample environment")
   }
 
   function onSubmit(body) {
@@ -65,13 +57,9 @@ export default function History({ data, mutate, session}) {
       })
       return
     }
+    alert("sample environment")
 
-    fetch('/api/statement', {
-      method: 'POST',
-      body: JSON.stringify(body)
-    }).then(() => mutate())
-      .catch(console.err)
-      .finally(() => reset({amount: '', description: ''}))
+
   }
 
   // function runningTotal(index) {
@@ -126,11 +114,7 @@ export default function History({ data, mutate, session}) {
         }
         if (obj.id) arr.push(obj)
       }
-
-      fetch('/api/statement', {method: 'PUT', body: JSON.stringify(arr)})
-        .then(() => mutate())
-        .catch(console.error)
-        .finally(() => setEdit(false))
+      setEdit(false)
     }
   }
 
@@ -158,7 +142,7 @@ export default function History({ data, mutate, session}) {
             <th>By</th>
             <th>Amount</th>
             {/* <th>Total</th> */}
-            <th  ><ArrowClockwise size={26} style={{width: '30px'}} className={`${spin && 'spin'} sway-on-hover`} onClick={mutate} fill="#0069d9" /></th>
+            <th  ><ArrowClockwise size={26} style={{width: '30px'}} className={`${spin && 'spin'} sway-on-hover`} fill="#0069d9" /></th>
             {admin && <th style={{width: '0', padding: '0'}}></th>}
           </tr>
         </thead>

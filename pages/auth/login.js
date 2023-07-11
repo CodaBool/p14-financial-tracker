@@ -5,11 +5,8 @@ import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 import Row from 'react-bootstrap/Row'
 import { useRouter } from 'next/router'
-import { Load } from '../../components/Load'
-import { signIn, useSession } from 'next-auth/react'
 
 export default function Login() {
-  const { data: session, status } = useSession()
   const [error, setError] = useState(null)
   
   const { handleSubmit, formState: { errors }, control } = useForm({ mode: 'onSubmit'})
@@ -21,19 +18,8 @@ export default function Login() {
     if (router.query.error === 'unkown') setError('Something went wrong')
   }, [router.query.error])
 
-  const onSubmit = async data => {
-    // console.log(data)
-    if (data.email && data.password) {
-      signIn('credentials', {
-        email: data.email,
-        password: data.password
-      })
-    }
-  }
-
-  if (session) {
-    router.push('/')
-    return <Load />
+  const onSubmit = data => {
+    alert('sample environment, auth is unecessary')
   }
 
   return (

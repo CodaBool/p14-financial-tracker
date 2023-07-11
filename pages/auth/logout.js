@@ -2,14 +2,8 @@
 import React from 'react'
 import Button from 'react-bootstrap/Button'
 import Row from 'react-bootstrap/Row'
-import { signOut, useSession } from 'next-auth/react'
-import { Load, isLoad } from '../../components/Load'
 
 export default function Logout() {
-  const { data: session, status } = useSession()
-
-  if (isLoad(session, status, true)) return <Load />
-
   return (
     <>
       <h1 className="display-4 text-center my-5">
@@ -21,9 +15,7 @@ export default function Logout() {
           style={{ width: '80%' }}
           variant="warning"
           type="submit"
-          onClick={() => {
-            signOut({ callbackUrl: '/' })
-          }}
+          onClick={() => alert('sample environment, auth is unecessary')}
         >
           Logout
         </Button>

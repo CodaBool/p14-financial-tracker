@@ -1,0 +1,1370 @@
+{
+  "bar": [
+    {
+      "_id": {
+        "alias": "Johanne Mustache",
+        "year": 2023,
+        "month": 5
+      },
+      "total": 110,
+      "month": 5,
+      "year": 2023,
+      "alias": "Johanne Mustache"
+    },
+    {
+      "_id": {
+        "alias": "Joel Ocanaz",
+        "year": 2023,
+        "month": 5
+      },
+      "total": 600,
+      "month": 5,
+      "year": 2023,
+      "alias": "Joel Ocanaz"
+    },
+    {
+      "_id": {
+        "alias": "Joel Ocanaz",
+        "year": 2023,
+        "month": 6
+      },
+      "total": 250,
+      "month": 6,
+      "year": 2023,
+      "alias": "Joel Ocanaz"
+    },
+    {
+      "_id": {
+        "alias": "Johanne Mustache",
+        "year": 2024,
+        "month": 3
+      },
+      "total": 500,
+      "month": 3,
+      "year": 2024,
+      "alias": "Johanne Mustache"
+    },
+    {
+      "_id": {
+        "alias": "Joel Ocanaz",
+        "year": 2024,
+        "month": 3
+      },
+      "total": 300,
+      "month": 3,
+      "year": 2024,
+      "alias": "Joel Ocanaz"
+    },
+    {
+      "_id": {
+        "alias": "codabool",
+        "year": 2024,
+        "month": 4
+      },
+      "total": 500,
+      "month": 4,
+      "year": 2024,
+      "alias": "codabool"
+    },
+    {
+      "_id": {
+        "alias": "Joel Ocanaz",
+        "year": 2024,
+        "month": 4
+      },
+      "total": 600,
+      "month": 4,
+      "year": 2024,
+      "alias": "Joel Ocanaz"
+    },
+    {
+      "_id": {
+        "alias": "Johanne Mustache",
+        "year": 2024,
+        "month": 5
+      },
+      "total": 100,
+      "month": 5,
+      "year": 2024,
+      "alias": "Johanne Mustache"
+    }
+  ],
+  "raw": [
+    {
+      "_id": "60cb8f88b89a0e784251205e",
+      "description": "Energy",
+      
+      "user": "609af7db405ba307aa75e1d1",
+      "alias": "Joel",
+      "amount": 228,
+      "createdAt": "2021-06-18T04:00:00.000Z",
+      "updatedAt": "2021-06-17T18:08:08.318Z",
+      "__v": 0
+    },
+    {
+      "_id": "60de1177b89a0e7842512060",
+      "description": "Internet",
+      
+      "user": "609af7db405ba307aa75e1d1",
+      "alias": "Joel",
+      "amount": 81,
+      "createdAt": "2021-06-28T04:00:00.000Z",
+      "updatedAt": "2021-07-01T19:03:19.396Z",
+      "__v": 0
+    },
+    {
+      "_id": "612fd2f30a4d2c18aeba102d",
+      "description": "Mortgage",
+      
+      "user": "609af7db405ba307aa75e1d1",
+      "alias": "Joel",
+      "amount": 1234,
+      "createdAt": "2021-09-01T04:00:00.000Z",
+      "updatedAt": "2021-09-01T19:22:27.410Z",
+      "__v": 0
+    },
+    {
+      "_id": "6172672f38f59f9bbcf8c10f",
+      "user": "609af7db405ba307aa75e1d1",
+      "alias": "Joel",
+      "amount": 138,
+      "description": "Water",
+      
+      "createdAt": "2021-10-22T04:00:00.000Z",
+      "updatedAt": "2021-10-22T16:00:00.000Z",
+      "__v": 0
+    },
+    {
+      "_id": "61dfa0537b62d5ee54968dd0",
+      "user": "609af7db405ba307aa75e1d1",
+      "alias": "Joel",
+      "amount": 110,
+      "description": "Internet",
+      
+      "createdAt": "2022-01-13T05:00:00.000Z",
+      "updatedAt": "2022-01-13T17:00:00.000Z",
+      "__v": 0
+    },
+    {
+      "_id": "627d5b217e444c5b59ebbf62",
+      "user": "609af7db405ba307aa75e1d1",
+      "alias": "Joel",
+      "amount": 124,
+      "description": "Water",
+      
+      "createdAt": "2022-02-17T05:00:00.000Z",
+      "updatedAt": "2022-02-17T17:00:00.000Z",
+      "__v": 0
+    },
+    {
+      "_id": "627d5b407e444c5b59ebbf6c",
+      "user": "609af7db405ba307aa75e1d1",
+      "alias": "Joel",
+      "amount": 144,
+      "description": "Energy",
+      
+      "createdAt": "2022-03-07T05:00:00.000Z",
+      "updatedAt": "2022-03-07T17:00:00.000Z",
+      "__v": 0
+    },
+    {
+      "_id": "627d5b517e444c5b59ebbf71",
+      "user": "609af7db405ba307aa75e1d1",
+      "alias": "Joel",
+      "amount": 110,
+      "description": "Internet",
+      
+      "createdAt": "2022-03-15T04:00:00.000Z",
+      "updatedAt": "2022-03-15T16:00:00.000Z",
+      "__v": 0
+    },
+    {
+      "_id": "627d5b907e444c5b59ebbf80",
+      "user": "609af7db405ba307aa75e1d1",
+      "alias": "Joel",
+      "amount": 166,
+      "description": "Energy",
+      
+      "createdAt": "2022-04-08T04:00:00.000Z",
+      "updatedAt": "2022-04-08T16:00:00.000Z",
+      "__v": 0
+    },
+    {
+      "_id": "627d5bdc7e444c5b59ebbf94",
+      "user": "609af7db405ba307aa75e1d1",
+      "alias": "Joel",
+      "amount": 44,
+      "description": "Water",
+      
+      "createdAt": "2022-05-05T04:00:00.000Z",
+      "updatedAt": "2022-07-11T17:17:33.225Z",
+      "__v": 0
+    },
+    {
+      "_id": "62cc484be9fa9b1606f24968",
+      "user": "609af7db405ba307aa75e1d1",
+      "alias": "Joel",
+      "amount": 115,
+      "description": "Water",
+      
+      "createdAt": "2022-05-19T04:00:00.000Z",
+      "updatedAt": "2022-07-11T17:17:33.064Z",
+      "__v": 0
+    },
+    {
+      "_id": "62cc48b2e9fa9b1606f2496f",
+      "user": "609af7db405ba307aa75e1d1",
+      "alias": "Joel",
+      "amount": 1234,
+      "description": "Mortgage",
+      
+      "createdAt": "2022-06-01T04:00:00.000Z",
+      "updatedAt": "2022-07-11T17:17:33.010Z",
+      "__v": 0
+    },
+    {
+      "_id": "62cc4915e9fa9b1606f2497b",
+      "user": "609af7db405ba307aa75e1d1",
+      "alias": "Joel",
+      "amount": 110,
+      "description": "Internet",
+      
+      "createdAt": "2022-06-13T04:00:00.000Z",
+      "updatedAt": "2022-07-11T17:17:32.899Z",
+      "__v": 0
+    },
+    {
+      "_id": "62cc4975e9fa9b1606f2498a",
+      "user": "609af7db405ba307aa75e1d1",
+      "alias": "Joel",
+      "amount": 255,
+      "description": "Energy",
+      
+      "createdAt": "2022-07-07T04:00:00.000Z",
+      "updatedAt": "2022-07-11T17:17:32.740Z",
+      "__v": 0
+    },
+    {
+      "_id": "6340ad9e7ef9403218b4766b",
+      "user": "609af7db405ba307aa75e1d1",
+      "alias": "Joel",
+      "amount": 297,
+      "description": "Energy",
+      
+      "createdAt": "2022-10-06T04:00:00.000Z",
+      "updatedAt": "2022-10-07T22:52:14.657Z",
+      "__v": 0
+    },
+    {
+      "_id": "6383bd60dd1b0dbc57ac954b",
+      "user": "609af7db405ba307aa75e1d1",
+      "alias": "Joel",
+      "amount": 200,
+      "description": "Energy",
+      
+      "createdAt": "2022-11-04T00:00:00.000Z",
+      "updatedAt": "2022-11-27T19:41:20.681Z",
+      "__v": 0
+    },
+    {
+      "_id": "63f828b5123b65dc2c620e19",
+      "user": "609af7db405ba307aa75e1d1",
+      "alias": "Joel",
+      "amount": 125,
+      "description": "Internet",
+      
+      "createdAt": "2023-01-11T05:00:00.000Z",
+      "updatedAt": "2023-02-24T03:02:13.889Z",
+      "__v": 0
+    },
+    {
+      "_id": "63f828d5123b65dc2c620e23",
+      "user": "609af7db405ba307aa75e1d1",
+      "alias": "Joel",
+      "amount": 1234,
+      "description": "Mortgage",
+      
+      "createdAt": "2023-02-01T05:00:00.000Z",
+      "updatedAt": "2023-02-24T03:02:45.364Z",
+      "__v": 0
+    },
+    {
+      "_id": "63f828f4123b65dc2c620e2d",
+      "user": "609af7db405ba307aa75e1d1",
+      "alias": "Joel",
+      "amount": 125,
+      "description": "Internet",
+      
+      "createdAt": "2023-02-13T05:00:00.000Z",
+      "updatedAt": "2023-02-24T03:03:16.257Z",
+      "__v": 0
+    },
+    {
+      "_id": "609af85f405ba307aa75e1d3",
+      "description": "Closing Cost",
+      
+      "user": "609af7db405ba307aa75e1d1",
+      "alias": "Joel",
+      "amount": 10410,
+      "createdAt": "2021-05-11T04:00:00.000Z",
+      "updatedAt": "2021-05-11T21:34:23.497Z",
+      "__v": 0
+    },
+    {
+      "_id": "611353960a4d2c18aeba1026",
+      "description": "Energy",
+      
+      "user": "609af7db405ba307aa75e1d1",
+      "alias": "Joel",
+      "amount": 284,
+      "createdAt": "2021-07-27T04:00:00.000Z",
+      "updatedAt": "2021-08-11T04:35:34.177Z",
+      "__v": 0
+    },
+    {
+      "_id": "611615060a4d2c18aeba1029",
+      "description": "Internet",
+      
+      "user": "609af7db405ba307aa75e1d1",
+      "alias": "Joel",
+      "amount": 70,
+      "createdAt": "2021-08-13T04:00:00.000Z",
+      "updatedAt": "2021-08-13T06:45:26.466Z",
+      "__v": 0
+    },
+    {
+      "_id": "6121432c0a4d2c18aeba102c",
+      "description": "Energy",
+      
+      "user": "609af7db405ba307aa75e1d1",
+      "alias": "Joel",
+      "amount": 256,
+      "createdAt": "2021-08-21T04:00:00.000Z",
+      "updatedAt": "2021-08-21T18:17:16.208Z",
+      "__v": 0
+    },
+    {
+      "_id": "615bf6c51a36da6cfde46e8c",
+      "user": "609af7db405ba307aa75e1d1",
+      "alias": "Joel",
+      "amount": 110,
+      "description": "Internet Upgrade",
+      
+      "createdAt": "2021-09-13T04:00:00.000Z",
+      "updatedAt": "2021-09-13T16:00:00.000Z",
+      "__v": 0
+    },
+    {
+      "_id": "6172686038f59f9bbcf8c123",
+      "user": "611d5e080a4d2c18aeba102a",
+      "alias": "Other",
+      "amount": 1234,
+      "description": "Mortgage",
+      
+      "createdAt": "2021-10-19T04:00:00.000Z",
+      "updatedAt": "2021-10-19T16:00:00.000Z",
+      "__v": 0
+    },
+    {
+      "_id": "61a1499f7b62d5ee54968d2d",
+      "user": "609af7db405ba307aa75e1d1",
+      "alias": "Joel",
+      "amount": 1234,
+      "description": "Mortgage",
+      
+      "createdAt": "2021-11-01T04:00:00.000Z",
+      "updatedAt": "2021-11-01T16:00:00.000Z",
+      "__v": 0
+    },
+    {
+      "_id": "61aa4c9e7b62d5ee54968d65",
+      "user": "609af7db405ba307aa75e1d1",
+      "alias": "Joel",
+      "amount": 144,
+      "description": "Energy",
+      
+      "createdAt": "2021-12-03T05:00:00.000Z",
+      "updatedAt": "2021-12-03T17:00:00.000Z",
+      "__v": 0
+    },
+    {
+      "_id": "61ba56317b62d5ee54968d7e",
+      "user": "609af7db405ba307aa75e1d1",
+      "alias": "Joel",
+      "amount": 864,
+      "description": "Escrow Fee",
+      
+      "createdAt": "2021-12-06T05:00:00.000Z",
+      "updatedAt": "2021-12-06T17:00:00.000Z",
+      "__v": 0
+    },
+    {
+      "_id": "61ca0c557b62d5ee54968da4",
+      "user": "611d5e080a4d2c18aeba102a",
+      "alias": "Other",
+      "amount": 1234,
+      "description": "Mortgage",
+      
+      "createdAt": "2021-12-20T05:00:00.000Z",
+      "updatedAt": "2021-12-20T17:00:00.000Z",
+      "__v": 0
+    },
+    {
+      "_id": "61f1a9c07b62d5ee54968dd9",
+      "user": "609af7db405ba307aa75e1d1",
+      "alias": "Joel",
+      "amount": 123,
+      "description": "water",
+      
+      "createdAt": "2022-01-19T05:00:00.000Z",
+      "updatedAt": "2022-01-19T17:00:00.000Z",
+      "__v": 0
+    },
+    {
+      "_id": "627d5ae07e444c5b59ebbf53",
+      "user": "609af7db405ba307aa75e1d1",
+      "alias": "Joel",
+      "amount": 1234,
+      "description": "Mortgage",
+      
+      "createdAt": "2022-02-01T05:00:00.000Z",
+      "updatedAt": "2022-02-01T17:00:00.000Z",
+      "__v": 0
+    },
+    {
+      "_id": "627d5af67e444c5b59ebbf58",
+      "user": "609af7db405ba307aa75e1d1",
+      "alias": "Joel",
+      "amount": 178,
+      "description": "Energy",
+      
+      "createdAt": "2022-02-07T05:00:00.000Z",
+      "updatedAt": "2022-02-07T17:00:00.000Z",
+      "__v": 0
+    },
+    {
+      "_id": "627d5b0f7e444c5b59ebbf5d",
+      "user": "609af7db405ba307aa75e1d1",
+      "alias": "Joel",
+      "amount": 110,
+      "description": "Internet",
+      
+      "createdAt": "2022-02-14T05:00:00.000Z",
+      "updatedAt": "2022-02-14T17:00:00.000Z",
+      "__v": 0
+    },
+    {
+      "_id": "62cc48d3e9fa9b1606f24974",
+      "user": "609af7db405ba307aa75e1d1",
+      "alias": "Joel",
+      "amount": 217,
+      "description": "Energy",
+      
+      "createdAt": "2022-06-06T04:00:00.000Z",
+      "updatedAt": "2022-07-11T17:17:32.955Z",
+      "__v": 0
+    },
+    {
+      "_id": "62cc4941e9fa9b1606f24980",
+      "user": "609af7db405ba307aa75e1d1",
+      "alias": "Joel",
+      "amount": 119,
+      "description": "Water",
+      
+      "createdAt": "2022-06-23T04:00:00.000Z",
+      "updatedAt": "2022-07-11T17:17:32.846Z",
+      "__v": 0
+    },
+    {
+      "_id": "62cc4956e9fa9b1606f24985",
+      "user": "609af7db405ba307aa75e1d1",
+      "alias": "Joel",
+      "amount": 1234,
+      "description": "Mortgage",
+      
+      "createdAt": "2022-07-01T04:00:00.000Z",
+      "updatedAt": "2022-07-11T17:17:32.794Z",
+      "__v": 0
+    },
+    {
+      "_id": "62dac2634762f4236ff73599",
+      "user": "609af7db405ba307aa75e1d1",
+      "alias": "Joel",
+      "amount": 117,
+      "description": "Water",
+      
+      "createdAt": "2022-07-19T04:00:00.000Z",
+      "updatedAt": "2022-09-28T19:16:54.002Z",
+      "__v": 0
+    },
+    {
+      "_id": "632a5368f17eff0b4b3ebb89",
+      "user": "609af7db405ba307aa75e1d1",
+      "alias": "Joel",
+      "amount": 125,
+      "description": "Internet",
+      
+      "createdAt": "2022-08-10T04:00:00.000Z",
+      "updatedAt": "2022-09-28T19:16:53.849Z",
+      "__v": 0
+    },
+    {
+      "_id": "632a5389f17eff0b4b3ebb96",
+      "user": "609af7db405ba307aa75e1d1",
+      "alias": "Joel",
+      "amount": 96,
+      "description": "Water",
+      
+      "createdAt": "2022-08-17T04:00:00.000Z",
+      "updatedAt": "2022-09-28T19:16:53.803Z",
+      "__v": 0
+    },
+    {
+      "_id": "634edafa615976f003564215",
+      "user": "609af7db405ba307aa75e1d1",
+      "alias": "Joel",
+      "amount": 119,
+      "description": "Water",
+      
+      "createdAt": "2022-10-17T04:00:00.000Z",
+      "updatedAt": "2022-10-18T16:57:30.468Z",
+      "__v": 0
+    },
+    {
+      "_id": "63f82887123b65dc2c620e0a",
+      "user": "609af7db405ba307aa75e1d1",
+      "alias": "Joel",
+      "amount": 115,
+      "description": "Water",
+      
+      "createdAt": "2022-12-21T05:00:00.000Z",
+      "updatedAt": "2023-02-24T03:01:27.053Z",
+      "__v": 0
+    },
+    {
+      "_id": "63f82898123b65dc2c620e0f",
+      "user": "609af7db405ba307aa75e1d1",
+      "alias": "Joel",
+      "amount": 1234,
+      "description": "Mortgage",
+      
+      "createdAt": "2023-01-01T05:00:00.000Z",
+      "updatedAt": "2023-02-24T03:01:44.063Z",
+      "__v": 0
+    },
+    {
+      "_id": "60c8fcc7b89a0e784251205d",
+      "description": "Water",
+      
+      "user": "609af7db405ba307aa75e1d1",
+      "alias": "Joel",
+      "amount": 125,
+      "createdAt": "2021-06-14T04:00:00.000Z",
+      "updatedAt": "2021-06-15T19:17:27.991Z",
+      "__v": 0
+    },
+    {
+      "_id": "609af7ed405ba307aa75e1d2",
+      "description": "Appraisal Fees",
+      
+      "user": "609af7db405ba307aa75e1d1",
+      "alias": "Joel",
+      "amount": 400,
+      "createdAt": "2021-04-26T04:00:00.000Z",
+      "updatedAt": "2021-05-11T21:32:29.474Z",
+      "__v": 0
+    },
+    {
+      "_id": "60de11c5b89a0e7842512061",
+      "description": "Winter Springs water account setup fee",
+      
+      "user": "609af7db405ba307aa75e1d1",
+      "alias": "Joel",
+      "amount": 103,
+      "createdAt": "2021-06-24T04:00:00.000Z",
+      "updatedAt": "2021-07-01T19:04:37.376Z",
+      "__v": 0
+    },
+    {
+      "_id": "611353e40a4d2c18aeba1027",
+      "description": "Mortgage",
+      
+      "user": "609af7db405ba307aa75e1d1",
+      "alias": "Joel",
+      "amount": 1234,
+      "createdAt": "2021-08-02T04:00:00.000Z",
+      "updatedAt": "2021-08-11T04:36:52.580Z",
+      "__v": 0
+    },
+    {
+      "_id": "612fd3050a4d2c18aeba102e",
+      "description": "Energy",
+      
+      "user": "609af7db405ba307aa75e1d1",
+      "alias": "Joel",
+      "amount": 258,
+      "createdAt": "2021-09-01T04:00:00.000Z",
+      "updatedAt": "2021-09-01T19:22:45.794Z",
+      "__v": 0
+    },
+    {
+      "_id": "615bf71e1a36da6cfde46e93",
+      "user": "611d5e080a4d2c18aeba102a",
+      "alias": "Other",
+      "amount": 1234,
+      "description": "Mortgage",
+      
+      "createdAt": "2021-09-22T04:00:00.000Z",
+      "updatedAt": "2021-09-22T16:00:00.000Z",
+      "__v": 0
+    },
+    {
+      "_id": "615bf83c1a36da6cfde46ea6",
+      "user": "609af7db405ba307aa75e1d1",
+      "alias": "Joel",
+      "amount": 110,
+      "description": "Internet",
+      
+      "createdAt": "2021-10-10T04:00:00.000Z",
+      "updatedAt": "2021-10-10T16:00:00.000Z",
+      "__v": 0
+    },
+    {
+      "_id": "618e399a7b62d5ee54968d20",
+      "user": "609af7db405ba307aa75e1d1",
+      "alias": "Joel",
+      "amount": 110,
+      "description": "Internet",
+      
+      "createdAt": "2021-11-05T04:00:00.000Z",
+      "updatedAt": "2021-11-05T16:00:00.000Z",
+      "__v": 0
+    },
+    {
+      "_id": "61a14aa67b62d5ee54968d46",
+      "user": "611d5e080a4d2c18aeba102a",
+      "alias": "Other",
+      "amount": 1234,
+      "description": "Mortgage",
+      
+      "createdAt": "2021-11-15T05:00:00.000Z",
+      "updatedAt": "2021-11-15T17:00:00.000Z",
+      "__v": 0
+    },
+    {
+      "_id": "61a63b337b62d5ee54968d50",
+      "user": "609af7db405ba307aa75e1d1",
+      "alias": "Joel",
+      "amount": 116,
+      "description": "Water",
+      
+      "createdAt": "2021-11-30T05:00:00.000Z",
+      "updatedAt": "2021-11-30T17:00:00.000Z",
+      "__v": 0
+    },
+    {
+      "_id": "61a846577b62d5ee54968d57",
+      "user": "609af7db405ba307aa75e1d1",
+      "alias": "Joel",
+      "amount": 1234,
+      "description": "Mortgage",
+      
+      "createdAt": "2021-12-01T05:00:00.000Z",
+      "updatedAt": "2021-12-01T17:00:00.000Z",
+      "__v": 0
+    },
+    {
+      "_id": "61b7aa9b7b62d5ee54968d75",
+      "user": "609af7db405ba307aa75e1d1",
+      "alias": "Joel",
+      "amount": 110,
+      "description": "Internet",
+      
+      "createdAt": "2021-12-13T05:00:00.000Z",
+      "updatedAt": "2021-12-13T17:00:00.000Z",
+      "__v": 0
+    },
+    {
+      "_id": "61d5f4027b62d5ee54968db1",
+      "user": "609af7db405ba307aa75e1d1",
+      "alias": "Joel",
+      "amount": 1234,
+      "description": "Mortgage",
+      
+      "createdAt": "2022-01-01T05:00:00.000Z",
+      "updatedAt": "2022-01-01T17:00:00.000Z",
+      "__v": 0
+    },
+    {
+      "_id": "61d5f4307b62d5ee54968dba",
+      "user": "609af7db405ba307aa75e1d1",
+      "alias": "Joel",
+      "amount": 112,
+      "description": "Energy",
+      
+      "createdAt": "2022-01-06T05:00:00.000Z",
+      "updatedAt": "2022-01-06T17:00:00.000Z",
+      "__v": 0
+    },
+    {
+      "_id": "61df9f947b62d5ee54968dc7",
+      "user": "609af7db405ba307aa75e1d1",
+      "alias": "Joel",
+      "amount": 633,
+      "description": "Home Insurance",
+      
+      "createdAt": "2022-01-10T05:00:00.000Z",
+      "updatedAt": "2022-01-10T17:00:00.000Z",
+      "__v": 0
+    },
+    {
+      "_id": "627d5b6e7e444c5b59ebbf7b",
+      "user": "609af7db405ba307aa75e1d1",
+      "alias": "Joel",
+      "amount": 1234,
+      "description": "Mortgage",
+      
+      "createdAt": "2022-04-01T04:00:00.000Z",
+      "updatedAt": "2022-04-01T16:00:00.000Z",
+      "__v": 0
+    },
+    {
+      "_id": "627d5b9f7e444c5b59ebbf85",
+      "user": "609af7db405ba307aa75e1d1",
+      "alias": "Joel",
+      "amount": 110,
+      "description": "Internet",
+      
+      "createdAt": "2022-04-12T04:00:00.000Z",
+      "updatedAt": "2022-04-12T16:00:00.000Z",
+      "__v": 0
+    },
+    {
+      "_id": "627d5beb7e444c5b59ebbf99",
+      "user": "609af7db405ba307aa75e1d1",
+      "alias": "Joel",
+      "amount": 166,
+      "description": "Energy",
+      
+      "createdAt": "2022-05-11T04:00:00.000Z",
+      "updatedAt": "2022-07-11T17:17:33.170Z",
+      "__v": 0
+    },
+    {
+      "_id": "627d5bf67e444c5b59ebbf9e",
+      "user": "609af7db405ba307aa75e1d1",
+      "alias": "Joel",
+      "amount": 110,
+      "description": "Internet",
+      
+      "createdAt": "2022-05-12T04:00:00.000Z",
+      "updatedAt": "2022-07-11T17:17:33.116Z",
+      "__v": 0
+    },
+    {
+      "_id": "63109708865a2292c23cc328",
+      "user": "609af7db405ba307aa75e1d1",
+      "alias": "Joel",
+      "amount": 1234,
+      "description": "Mortgage",
+      
+      "createdAt": "2022-09-01T04:00:00.000Z",
+      "updatedAt": "2022-09-28T19:16:53.737Z",
+      "__v": 0
+    },
+    {
+      "_id": "632a5215f17eff0b4b3ebb4b",
+      "user": "609af7db405ba307aa75e1d1",
+      "alias": "Joel",
+      "amount": 113,
+      "description": "Water",
+      
+      "createdAt": "2022-09-22T04:00:00.000Z",
+      "updatedAt": "2022-09-28T19:16:53.572Z",
+      "__v": 0
+    },
+    {
+      "_id": "632a52a2f17eff0b4b3ebb63",
+      "user": "609af7db405ba307aa75e1d1",
+      "alias": "Joel",
+      "amount": 264,
+      "description": "Energy",
+      
+      "createdAt": "2022-09-05T04:00:00.000Z",
+      "updatedAt": "2022-09-28T19:16:53.689Z",
+      "__v": 0
+    },
+    {
+      "_id": "6383bd18dd1b0dbc57ac952e",
+      "user": "609af7db405ba307aa75e1d1",
+      "alias": "Joel",
+      "amount": 1234,
+      "description": "Mortgage",
+      
+      "createdAt": "2022-11-01T04:00:00.000Z",
+      "updatedAt": "2022-11-27T19:40:08.121Z",
+      "__v": 0
+    },
+    {
+      "_id": "6383bd85dd1b0dbc57ac9550",
+      "user": "609af7db405ba307aa75e1d1",
+      "alias": "Joel",
+      "amount": 125,
+      "description": "Internet",
+      
+      "createdAt": "2022-11-15T00:00:00.000Z",
+      "updatedAt": "2022-11-27T19:41:57.857Z",
+      "__v": 0
+    },
+    {
+      "_id": "6383bdb8dd1b0dbc57ac9555",
+      "user": "609af7db405ba307aa75e1d1",
+      "alias": "Joel",
+      "amount": 99,
+      "description": "Water",
+      
+      "createdAt": "2022-11-18T00:00:00.000Z",
+      "updatedAt": "2022-11-27T19:42:48.511Z",
+      "__v": 0
+    },
+    {
+      "_id": "638a86dc2b2f50d9b6848b2f",
+      "user": "609af7db405ba307aa75e1d1",
+      "alias": "Joel",
+      "amount": 1234,
+      "description": "Mortgage",
+      
+      "createdAt": "2022-12-02T00:00:00.000Z",
+      "updatedAt": "2022-12-02T23:14:36.357Z",
+      "__v": 0
+    },
+    {
+      "_id": "638b9253f17dc790b077f547",
+      "user": "609af7db405ba307aa75e1d1",
+      "alias": "Joel",
+      "amount": 161,
+      "description": "Energy",
+      
+      "createdAt": "2022-12-03T00:00:00.000Z",
+      "updatedAt": "2022-12-03T18:15:47.582Z",
+      "__v": 0
+    },
+    {
+      "_id": "63f8285c123b65dc2c620dff",
+      "user": "609af7db405ba307aa75e1d1",
+      "alias": "Joel",
+      "amount": 125,
+      "description": "Internet",
+      
+      "createdAt": "2022-12-12T05:00:00.000Z",
+      "updatedAt": "2023-02-24T03:00:44.972Z",
+      "__v": 0
+    },
+    {
+      "_id": "63f828a8123b65dc2c620e14",
+      "user": "609af7db405ba307aa75e1d1",
+      "alias": "Joel",
+      "amount": 156,
+      "description": "Energy",
+      
+      "createdAt": "2023-01-04T05:00:00.000Z",
+      "updatedAt": "2023-02-24T03:02:00.535Z",
+      "__v": 0
+    },
+    {
+      "_id": "63f828c9123b65dc2c620e1e",
+      "user": "609af7db405ba307aa75e1d1",
+      "alias": "Joel",
+      "amount": 83,
+      "description": "Water",
+      
+      "createdAt": "2023-01-19T05:00:00.000Z",
+      "updatedAt": "2023-02-24T03:02:33.907Z",
+      "__v": 0
+    },
+    {
+      "_id": "63f828e5123b65dc2c620e28",
+      "user": "609af7db405ba307aa75e1d1",
+      "alias": "Joel",
+      "amount": 182,
+      "description": "Energy",
+      
+      "createdAt": "2023-02-06T05:00:00.000Z",
+      "updatedAt": "2023-02-24T03:03:01.788Z",
+      "__v": 0
+    },
+    {
+      "_id": "63f828fe123b65dc2c620e32",
+      "user": "609af7db405ba307aa75e1d1",
+      "alias": "Joel",
+      "amount": 95,
+      "description": "Water",
+      
+      "createdAt": "2023-02-22T05:00:00.000Z",
+      "updatedAt": "2023-02-24T03:03:26.023Z",
+      "__v": 0
+    },
+    {
+      "_id": "60de115cb89a0e784251205f",
+      "description": "Mortgage",
+      "user": "609af7db405ba307aa75e1d1",
+      "alias": "Joel",
+      "amount": 1234,
+      "createdAt": "2021-07-01T04:00:00.000Z",
+      "updatedAt": "2021-07-01T19:02:52.062Z",
+      "__v": 0
+    },
+    {
+      "_id": "611354c10a4d2c18aeba1028",
+      "description": "Water",
+      
+      "user": "609af7db405ba307aa75e1d1",
+      "alias": "Joel",
+      "amount": 124,
+      "createdAt": "2021-08-04T04:00:00.000Z",
+      "updatedAt": "2021-08-11T04:40:33.721Z",
+      "__v": 0
+    },
+    {
+      "_id": "611d5e180a4d2c18aeba102b",
+      "description": "Mortgage",
+      
+      "user": "611d5e080a4d2c18aeba102a",
+      "alias": "Other",
+      "amount": 1234,
+      "createdAt": "2021-08-02T04:00:00.000Z",
+      "updatedAt": "2021-08-18T19:23:04.737Z",
+      "__v": 0
+    },
+    {
+      "_id": "615bf7f61a36da6cfde46e9f",
+      "user": "609af7db405ba307aa75e1d1",
+      "alias": "Joel",
+      "amount": 1234,
+      "description": "Mortgage",
+      
+      "createdAt": "2021-10-01T04:00:00.000Z",
+      "updatedAt": "2021-10-01T16:00:00.000Z",
+      "__v": 0
+    },
+    {
+      "_id": "617d6d3e7b62d5ee54968d15",
+      "user": "609af7db405ba307aa75e1d1",
+      "alias": "Joel",
+      "amount": 274,
+      "description": "Energy",
+      
+      "createdAt": "2021-10-31T04:00:00.000Z",
+      "updatedAt": "2021-10-31T16:00:00.000Z",
+      "__v": 0
+    },
+    {
+      "_id": "61a14a0f7b62d5ee54968d3c",
+      "user": "609af7db405ba307aa75e1d1",
+      "alias": "Joel",
+      "amount": 118,
+      "description": "Water",
+      
+      "createdAt": "2021-11-17T05:00:00.000Z",
+      "updatedAt": "2021-11-17T17:00:00.000Z",
+      "__v": 0
+    },
+    {
+      "_id": "61b61beb7b62d5ee54968d6e",
+      "user": "609af7db405ba307aa75e1d1",
+      "alias": "Joel",
+      "amount": 112,
+      "description": "Energy",
+      
+      "createdAt": "2021-12-13T05:00:00.000Z",
+      "updatedAt": "2021-12-13T17:00:00.000Z",
+      "__v": 0
+    },
+    {
+      "_id": "61c2fd757b62d5ee54968d8d",
+      "user": "609af7db405ba307aa75e1d1",
+      "alias": "Joel",
+      "amount": 116,
+      "description": "Water",
+      
+      "createdAt": "2021-12-22T05:00:00.000Z",
+      "updatedAt": "2021-12-22T17:00:00.000Z",
+      "__v": 0
+    },
+    {
+      "_id": "627d5b317e444c5b59ebbf67",
+      "user": "609af7db405ba307aa75e1d1",
+      "alias": "Joel",
+      "amount": 1234,
+      "description": "Mortgage",
+      
+      "createdAt": "2022-03-01T05:00:00.000Z",
+      "updatedAt": "2022-03-01T17:00:00.000Z",
+      "__v": 0
+    },
+    {
+      "_id": "627d5b617e444c5b59ebbf76",
+      "user": "609af7db405ba307aa75e1d1",
+      "alias": "Joel",
+      "amount": 110,
+      "description": "Water",
+      
+      "createdAt": "2022-03-16T04:00:00.000Z",
+      "updatedAt": "2022-03-16T16:00:00.000Z",
+      "__v": 0
+    },
+    {
+      "_id": "627d5bad7e444c5b59ebbf8a",
+      "user": "609af7db405ba307aa75e1d1",
+      "alias": "Joel",
+      "amount": 125,
+      "description": "Water",
+      
+      "createdAt": "2022-04-20T04:00:00.000Z",
+      "updatedAt": "2022-04-20T16:00:00.000Z",
+      "__v": 0
+    },
+    {
+      "_id": "627d5bbc7e444c5b59ebbf8f",
+      "user": "609af7db405ba307aa75e1d1",
+      "alias": "Joel",
+      "amount": 1234,
+      "description": "Mortgage",
+      
+      "createdAt": "2022-05-02T04:00:00.000Z",
+      "updatedAt": "2022-05-02T16:00:00.000Z",
+      "__v": 0
+    },
+    {
+      "_id": "62cf196786848669ba88c462",
+      "user": "609af7db405ba307aa75e1d1",
+      "alias": "Joel",
+      "amount": 125,
+      "description": "Internet",
+      
+      "createdAt": "2022-07-12T04:00:00.000Z",
+      "updatedAt": "2022-09-28T19:16:54.051Z",
+      "__v": 0
+    },
+    {
+      "_id": "62e89c7ae6bba42d71cf732a",
+      "user": "609af7db405ba307aa75e1d1",
+      "alias": "Joel",
+      "amount": 1234,
+      "description": "Mortgage",
+      
+      "createdAt": "2022-08-01T04:00:00.000Z",
+      "updatedAt": "2022-09-28T19:16:53.953Z",
+      "__v": 0
+    },
+    {
+      "_id": "632a5242f17eff0b4b3ebb56",
+      "user": "609af7db405ba307aa75e1d1",
+      "alias": "Joel",
+      "amount": 125,
+      "description": "Internet",
+      
+      "createdAt": "2022-09-11T04:00:00.000Z",
+      "updatedAt": "2022-09-28T19:16:53.624Z",
+      "__v": 0
+    },
+    {
+      "_id": "632a5316f17eff0b4b3ebb80",
+      "user": "609af7db405ba307aa75e1d1",
+      "alias": "Joel",
+      "amount": 319,
+      "description": "Energy",
+      
+      "createdAt": "2022-08-04T04:00:00.000Z",
+      "updatedAt": "2022-09-28T19:16:53.905Z",
+      "__v": 0
+    },
+    {
+      "_id": "63389e18a98ef720a2890b63",
+      "user": "609af7db405ba307aa75e1d1",
+      "alias": "Joel",
+      "amount": 1234,
+      "description": "Mortgage",
+      
+      "createdAt": "2022-10-01T04:00:00.000Z",
+      "updatedAt": "2022-10-01T20:07:52.999Z",
+      "__v": 0
+    },
+    {
+      "_id": "6347985620a2e109a7f28498",
+      "user": "609af7db405ba307aa75e1d1",
+      "alias": "Joel",
+      "amount": 125,
+      "description": "Internet",
+      
+      "createdAt": "2022-10-13T04:00:00.000Z",
+      "updatedAt": "2022-10-13T04:47:18.831Z",
+      "__v": 0
+    },
+    {
+      "_id": "63f82832123b65dc2c620dfa",
+      "user": "609af7db405ba307aa75e1d1",
+      "alias": "Joel",
+      "amount": 27,
+      "description": "Water",
+      
+      "createdAt": "2022-11-28T05:00:00.000Z",
+      "updatedAt": "2023-02-24T03:00:02.285Z",
+      "__v": 0
+    },
+    {
+      "_id": "63f8cd1d4df74ca6a17e40ea",
+      "user": "609af7db405ba307aa75e1d1",
+      "alias": "Joel",
+      "amount": 110,
+      "description": "Internet",
+      
+      "createdAt": "2021-07-02T04:00:00.000Z",
+      "updatedAt": "2023-02-24T14:43:41.366Z",
+      "__v": 0
+    },
+    {
+      "_id": "63f8cd254df74ca6a17e40ef",
+      "user": "609af7db405ba307aa75e1d1",
+      "alias": "Joel",
+      "amount": 200,
+      "description": "Water",
+      
+      "createdAt": "2021-07-02T04:00:00.000Z",
+      "updatedAt": "2023-02-24T14:43:49.901Z",
+      "__v": 0
+    },
+    {
+      "_id": "63f8cd314df74ca6a17e40f4",
+      "user": "609af7db405ba307aa75e1d1",
+      "alias": "Joel",
+      "amount": 110,
+      "description": "Water",
+      
+      "createdAt": "2021-09-02T04:00:00.000Z",
+      "updatedAt": "2023-02-24T14:44:01.227Z",
+      "__v": 0
+    },
+    {
+      "_id": "63f8cdae4df74ca6a17e40ff",
+      "user": "609af7db405ba307aa75e1d1",
+      "alias": "Joel",
+      "amount": 250,
+      "description": "Energy",
+      
+      "createdAt": "2021-11-02T04:00:00.000Z",
+      "updatedAt": "2023-02-24T14:46:06.990Z",
+      "__v": 0
+    },
+    {
+      "_id": "64000b758106943602ab1d04",
+      "user": "609af7db405ba307aa75e1d1",
+      "alias": "Joel",
+      "amount": 1234,
+      "description": "Mortgage",
+      
+      "createdAt": "2023-03-01T00:00:00.000Z",
+      "updatedAt": "2023-03-02T02:35:33.320Z",
+      "__v": 0
+    },
+    {
+      "_id": "64078443559be0b58bf7a5e2",
+      "user": "609af7db405ba307aa75e1d1",
+      "alias": "Joel",
+      "amount": 187,
+      "description": "Energy",
+      
+      "createdAt": "2023-03-07T00:00:00.000Z",
+      "updatedAt": "2023-03-07T18:36:51.667Z",
+      "__v": 0
+    },
+    {
+      "_id": "640ee413247cecf4de0b2a20",
+      "user": "609af7db405ba307aa75e1d1",
+      "alias": "Joel",
+      "amount": 125,
+      "description": "Internet",
+      
+      "createdAt": "2023-03-13T00:00:00.000Z",
+      "updatedAt": "2023-03-13T08:51:31.562Z",
+      "__v": 0
+    },
+    {
+      "_id": "641a121d5272f7459b57c63b",
+      "user": "609af7db405ba307aa75e1d1",
+      "alias": "Joel",
+      "amount": 121,
+      "description": "Water",
+      
+      "createdAt": "2023-03-22T00:00:00.000Z",
+      "updatedAt": "2023-03-21T20:22:53.983Z",
+      "__v": 0
+    },
+    {
+      "_id": "643553e1b57416897cc88ad6",
+      "user": "609af7db405ba307aa75e1d1",
+      "alias": "Joel",
+      "amount": 125,
+      "description": "Internet",
+      
+      "createdAt": "2023-04-10T04:00:00.000Z",
+      "updatedAt": "2023-04-11T12:34:41.398Z",
+      "__v": 0
+    },
+    {
+      "_id": "6435542ab57416897cc88add",
+      "user": "609af7db405ba307aa75e1d1",
+      "alias": "Joel",
+      "amount": 208,
+      "description": "Energy",
+      
+      "createdAt": "2023-04-03T04:00:00.000Z",
+      "updatedAt": "2023-04-11T12:35:54.607Z",
+      "__v": 0
+    },
+    {
+      "_id": "643ea8564182274f8dac123f",
+      "user": "609af7db405ba307aa75e1d1",
+      "alias": "Joel",
+      "amount": 119,
+      "description": "Water",
+      
+      "createdAt": "2023-04-16T07:00:00.000Z",
+      "updatedAt": "2023-04-18T14:25:26.826Z",
+      "__v": 0
+    },
+    {
+      "_id": "645044ad1f00a972b6ad02e3",
+      "user": "609af7db405ba307aa75e1d1",
+      "alias": "Joel",
+      "amount": 1234,
+      "description": "Mortgage",
+      
+      "createdAt": "2023-04-01T00:00:00.000Z",
+      "updatedAt": "2023-05-01T23:01:01.246Z",
+      "__v": 0
+    },
+    {
+      "_id": "6456824f718e591b3ce9dd33",
+      "user": "609af7db405ba307aa75e1d1",
+      "alias": "Joel",
+      "amount": 219,
+      "description": "Energy",
+      
+      "createdAt": "2023-05-04T07:00:00.000Z",
+      "updatedAt": "2023-05-06T16:37:35.088Z",
+      "__v": 0
+    },
+    {
+      "_id": "6485db62fd8cc0d2a5c1eac2",
+      "user": "609af7db405ba307aa75e1d1",
+      "alias": "Joel",
+      "amount": 125,
+      "description": "Internet",
+      
+      "createdAt": "2023-06-09T07:00:00.000Z",
+      "updatedAt": "2023-06-11T14:34:10.983Z",
+      "__v": 0
+    },
+    {
+      "_id": "6485dbcefb48178adf837d25",
+      "user": "609af7db405ba307aa75e1d1",
+      "alias": "Joel",
+      "amount": 125,
+      "description": "Internet",
+      
+      "createdAt": "2023-05-08T07:00:00.000Z",
+      "updatedAt": "2023-06-11T14:35:58.659Z",
+      "__v": 0
+    },
+    {
+      "_id": "6485dc0ffb48178adf837d2c",
+      "user": "609af7db405ba307aa75e1d1",
+      "alias": "Joel",
+      "amount": 127,
+      "description": "Water",
+      
+      "createdAt": "2023-05-15T07:00:00.000Z",
+      "updatedAt": "2023-06-11T14:37:03.297Z",
+      "__v": 0
+    },
+    {
+      "_id": "6485dc3df7642468ea934f40",
+      "user": "609af7db405ba307aa75e1d1",
+      "alias": "Joel",
+      "amount": 1234,
+      "description": "Mortgage",
+      
+      "createdAt": "2023-05-20T07:00:00.000Z",
+      "updatedAt": "2023-06-11T14:37:49.474Z",
+      "__v": 0
+    },
+    {
+      "_id": "6485dc7ef7642468ea934f49",
+      "user": "609af7db405ba307aa75e1d1",
+      "alias": "Joel",
+      "amount": 217,
+      "description": "Energy",
+      
+      "createdAt": "2023-06-02T07:00:00.000Z",
+      "updatedAt": "2023-06-11T14:38:54.564Z",
+      "__v": 0
+    },
+    {
+      "_id": "6485dcadf7642468ea934f50",
+      "user": "609af7db405ba307aa75e1d1",
+      "alias": "Joel",
+      "amount": 1234,
+      "description": "Mortgage",
+      
+      "createdAt": "2023-06-01T07:00:00.000Z",
+      "updatedAt": "2023-06-11T14:39:41.700Z",
+      "__v": 0
+    },
+    {
+      "_id": "6498738bbe93e4addd372b1f",
+      "user": "609af7db405ba307aa75e1d1",
+      "alias": "Joel",
+      "amount": 128,
+      "description": "Water",
+      
+      "createdAt": "2023-06-20T07:00:00.000Z",
+      "updatedAt": "2023-06-25T17:04:11.030Z",
+      "__v": 0
+    },
+    {
+      "_id": "64a67abf83cab94fe8347933",
+      "user": "609af7db405ba307aa75e1d1",
+      "alias": "Joel",
+      "amount": 1234,
+      "description": "Mortgage",
+      
+      "createdAt": "2023-07-02T07:00:00.000Z",
+      "updatedAt": "2023-07-06T08:26:39.020Z",
+      "__v": 0
+    }
+  ],
+  "doughnut": [
+    {
+      "_id": {
+        "alias": "Joel Ocanaz"
+      },
+      "total": 1750,
+      "alias": "Joel Ocanaz"
+    },
+    {
+      "_id": {
+        "alias": "codabool"
+      },
+      "total": 500,
+      "alias": "codabool"
+    },
+    {
+      "_id": {
+        "alias": "Johanne Mustache"
+      },
+      "total": 710,
+      "alias": "Johanne Mustache"
+    }
+  ]
+}
