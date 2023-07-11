@@ -53,7 +53,7 @@ export default NextAuth({
   debug: true,
   session: {
     strategy: 'jwt',
-    maxAge: 30 * 24 * 60 * 60 * 100, // 30 days
+    maxAge: 31556952, // in seconds (31,556,952 = 1 year)
   },
   callbacks: {
     async session({ session, token, user }) {

@@ -1,7 +1,7 @@
 > Live sample viewable [here](http://stat-sample.codadash.com.s3-website-us-east-1.amazonaws.com/)
 # About
 This is a self-host financial tracker. Ideal for single goal tracking with multiple people involved making contributions.
-The app is built using Next.js, Mongodb and uses next-auth for authentication.
+The app is built using Next.js, Mongodb and uses next-auth for authentication. Authentication tokens by default expire after a year to allow long sessions.
 
 ![pie](https://github.com/codabool/stat.codadash.com/blob/sample/public/image/pie.jpg?raw=true)
 
@@ -72,3 +72,7 @@ skip if you wish to use Mongo Atlas for your database
 +removed a couple dependencies in favor of naitive browser functions (axios, nookies, timeago.js, next-connect)
 
 +added SWR which makes data fetching much nicer
+
+
+# 📅 Upcoming
+I will add a solar energy production vs power consumption tab.
