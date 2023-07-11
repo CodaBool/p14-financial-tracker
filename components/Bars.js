@@ -103,7 +103,7 @@ export default function Bars({ data, screen }) {
           <h4 className="">Month View</h4>
         </Col>
         <Col md={3}>
-          <Form.Select className="pt-2 d-inline" style={{maxWidth: '120px'}} onChange={handleYear} ref={yearSelect}>
+          <Form.Select className="my-3 d-inline" style={{maxWidth: '120px'}} onChange={handleYear} ref={yearSelect}>
             {yearOptions.length > 0 && yearOptions.map(y => (
               <option value={y} key={y}>{y}</option>
             ))}
