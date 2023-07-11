@@ -25,12 +25,12 @@ export default function index() {
     <>
       <Row>
         <Col lg={8}>
-          <div className={`${!screen.includes('small') && 'p-5'} mt-3`}>
+          <div className='mt-4'>
             {data && <Bars data={data.bar} screen={screen} />}
           </div>
         </Col>
         <Col lg={4}>
-          <div className={`${screen.includes('small') ? 'mt-5' : 'p-3'} mb-5 doughnut-container`}>
+          <div className={'my-5 doughnut-container'}>
             {data && <Doughnut data={data.doughnut} />}
           </div>
         </Col>
