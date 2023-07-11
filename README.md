@@ -5,6 +5,9 @@ The app is built using Next.js, Mongodb and uses next-auth for authentication. A
 
 Open Source and free. Own your own data, and secure it with login based authentication. Deploy it yourself locally or use the Vercel platform combined with MongoDB Atlas.
 
+# 🖊️ Details
+> I have written a post about why and how this was created [here](https://codabool.com/blog/18)
+
 # Self-host
 This project can be self-hosted for use. Follow the steps below
 
