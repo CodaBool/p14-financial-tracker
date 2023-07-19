@@ -73,5 +73,6 @@ skip if you wish to use Mongo Atlas for your database
 +added SWR which makes data fetching much nicer
 
 
-# 📅 Upcoming
-I will add a solar energy production vs power consumption tab.
+# ☀️ Solar Tab added
+
+![Screenshot 2023-07-18 205522](https://github.com/CodaBool/p14-financial-tracker/assets/61724833/711f159d-d8e9-4b29-a313-7da2fe97e8f6)
