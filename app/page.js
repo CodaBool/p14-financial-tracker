@@ -13,6 +13,7 @@ export default async function Index() {
   const admin = session?.user.email === 'codabool@pm.me'
   const aggRaw = await aggregate()
   const day = (new Date().getDay() + 6) % 7
+  console.log("search for day", day, new Date())
   const solarRaw = await Daily.find({ day }).sort({ createdAt: 1 })
   const agg = jparse(aggRaw)
   const solar = jparse(solarRaw)
