@@ -59,6 +59,24 @@ const statementSchema = new Schema({
   updatedAt: { type: Date, default: Date.now }
 })
 
+const senseDailySchema = new Schema({
+  usage: Number,
+  solar: Number,
+  day: Number,
+  createdAt: Date,
+  expireAt: Date,
+})
+
+const senseMonthlySchema = new Schema({
+  average_usage: Number,
+  average_solar: Number,
+  month: Number,
+  year: Date,
+  createdAt: Date,
+  expireAt: Date,
+})
 
 export const User = mongoose.models.user || mongoose.model('user', userSchema)
 export const Statement = mongoose.models.statement || mongoose.model('statement', statementSchema)
+export const Daily = mongoose.models.day || mongoose.model('day', senseDailySchema)
+export const Monthly = mongoose.models.month || mongoose.model('month', senseMonthlySchema)

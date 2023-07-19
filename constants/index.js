@@ -1,3 +1,5 @@
+export const API = process.env.API_URL || "http://localhost:3000"
+
 export function usdPretty (price) {
   return (
     <h3 className="money">

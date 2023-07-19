@@ -1,3 +1,5 @@
+'use client'
+
 import { useEffect, useState, useRef } from 'react'
 import { Col, Row } from 'react-bootstrap'
 import Form from 'react-bootstrap/Form'

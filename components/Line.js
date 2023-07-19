@@ -1,3 +1,5 @@
+'use client'
+
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -9,7 +11,7 @@ import {
   Legend,
 } from 'chart.js'
 import { Line } from 'react-chartjs-2'
-import { Load } from './Load'
+import { Load } from '@/components/Load'
 
 ChartJS.register(
   CategoryScale,

@@ -1,3 +1,5 @@
+'use client'
+
 import React, { useState } from 'react'
 import { useForm, Controller } from 'react-hook-form'
 import bcrypt from 'bcryptjs'
@@ -5,10 +7,10 @@ import { Envelope, Key, Person } from 'react-bootstrap-icons'
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 import Row from 'react-bootstrap/Row'
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/navigation'
 import { signIn, useSession } from 'next-auth/react'
-import { Load } from '../../components/Load'
-import Toast from '../../components/Toast'
+import { Load } from '@/components/Load'
+import Toast from '@/components/Toast'
 
 export default function Signup() {
   const [password, setPassword] = useState('')

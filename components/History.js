@@ -1,3 +1,5 @@
+'use client'
+
 import { useState, useEffect } from 'react'
 import Table from 'react-bootstrap/Table'
 import Form from 'react-bootstrap/Form'
@@ -5,20 +7,19 @@ import Button from 'react-bootstrap/Button'
 import InputGroup from 'react-bootstrap/InputGroup'
 import { PlusSquare, XSquare, Calendar3, ArrowClockwise } from 'react-bootstrap-icons'
 import { useForm } from 'react-hook-form'
-import DateInput from './DateInput'
-import { rtf } from '../constants'
+import DateInput from '@/components/DateInput'
+import { rtf } from '@/constants'
+import { useRouter } from 'next/navigation'
 import "react-day-picker/dist/style.css"
 
-export default function History({ data, mutate, session}) {
+export default function History({ data, session, admin}) {
+  const router = useRouter()
   const { register, handleSubmit, formState: { errors }, reset, setError, setValue } = useForm()
   const [readable, setReadable] = useState(false)
   const [recent, setRecent] = useState()
   const [showAll, setShowAll] = useState()
-  const [admin, setAdmin] = useState()
   const [spin, setSpin] = useState()
   const [edit, setEdit] = useState()
-
-  useEffect(() => setAdmin(session?.user.email === 'codabool@pm.me'), [session])
 
   useEffect(() =>  {
     if (!data?.raw) {
@@ -50,7 +51,7 @@ export default function History({ data, mutate, session}) {
     fetch(`/api/statement?${new URLSearchParams({id})}`,
       { method: 'DELETE' }
     )
-      .then(() => mutate())
+      .then(() => router.refresh())
       .catch(err => {
         console.error(err.response.data.msg)
       })
@@ -65,11 +66,10 @@ export default function History({ data, mutate, session}) {
       })
       return
     }
-
     fetch('/api/statement', {
       method: 'POST',
       body: JSON.stringify(body)
-    }).then(() => mutate())
+    }).then(() => router.refresh())
       .catch(console.err)
       .finally(() => reset({amount: '', description: ''}))
   }
@@ -128,7 +128,7 @@ export default function History({ data, mutate, session}) {
       }
 
       fetch('/api/statement', {method: 'PUT', body: JSON.stringify(arr)})
-        .then(() => mutate())
+        .then(() => router.refresh())
         .catch(console.error)
         .finally(() => setEdit(false))
     }
@@ -158,7 +158,7 @@ export default function History({ data, mutate, session}) {
             <th>By</th>
             <th>Amount</th>
             {/* <th>Total</th> */}
-            <th  ><ArrowClockwise size={26} style={{width: '30px'}} className={`${spin && 'spin'} sway-on-hover`} onClick={mutate} fill="#0069d9" /></th>
+            <th  ><ArrowClockwise size={26} style={{width: '30px'}} className={`${spin && 'spin'} sway-on-hover`} onClick={() => router.refresh()} fill="#0069d9" /></th>
             {admin && <th style={{width: '0', padding: '0'}}></th>}
           </tr>
         </thead>

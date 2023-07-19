@@ -1,14 +1,17 @@
+'use client'
+
 import React, { useState, useEffect } from 'react'
 import { useForm, Controller } from 'react-hook-form'
 import { Envelope, Key } from 'react-bootstrap-icons'
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 import Row from 'react-bootstrap/Row'
-import { useRouter } from 'next/router'
-import { Load } from '../../components/Load'
+import { useRouter, useSearchParams } from 'next/navigation'
+import { Load } from '@/components/Load'
 import { signIn, useSession } from 'next-auth/react'
 
 export default function Login() {
+  const searchParams = useSearchParams()
   const { data: session, status } = useSession()
   const [error, setError] = useState(null)
   
@@ -16,10 +19,10 @@ export default function Login() {
   const router = useRouter()
 
   useEffect(() => {
-    if (router.query.error === 'nonexistant') setError('No user found by that email')
-    if (router.query.error === 'invalid') setError('Invalid login')
-    if (router.query.error === 'unkown') setError('Something went wrong')
-  }, [router.query.error])
+    if (searchParams.get('error') === 'nonexistant') setError('No user found by that email')
+    if (searchParams.get('error') === 'invalid') setError('Invalid login')
+    if (searchParams.get('error') === 'unkown') setError('Something went wrong')
+  }, [searchParams])
 
   const onSubmit = async data => {
     // console.log(data)
@@ -33,7 +36,7 @@ export default function Login() {
 
   if (session) {
     router.push('/')
-    return <Load />
+    return <h1 className="mt-5 text-center">signing in</h1>
   }
 
   return (

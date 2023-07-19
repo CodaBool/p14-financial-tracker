@@ -1,3 +1,5 @@
+'use client'
+
 import Toast from 'react-bootstrap/Toast'
 
 export default function ToastCustom({ show, setShow, title, body, error }) {

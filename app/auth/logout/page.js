@@ -1,14 +1,13 @@
+'use client'
+
 /* This may be better suited to be a modal which the user can interact with on any page */
 import React from 'react'
 import Button from 'react-bootstrap/Button'
 import Row from 'react-bootstrap/Row'
 import { signOut, useSession } from 'next-auth/react'
-import { Load, isLoad } from '../../components/Load'
 
 export default function Logout() {
-  const { data: session, status } = useSession()
-
-  if (isLoad(session, status, true)) return <Load />
+  // const { data: session, status } = useSession()
 
   return (
     <>
@@ -22,7 +21,7 @@ export default function Logout() {
           variant="warning"
           type="submit"
           onClick={() => {
-            signOut({ callbackUrl: '/' })
+            signOut()
           }}
         >
           Logout

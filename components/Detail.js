@@ -1,10 +1,12 @@
+'use client'
+
 import { useState, useEffect, useRef } from 'react'
 import Form from 'react-bootstrap/Form'
-import { Load } from './Load'
-import LineChart from './Line'
+import { Load } from '@/components/Load'
+import LineChart from '@/components/Line'
 let labels = []
 
-export default function Detail({ data, mutate, session, screen}) {
+export default function Detail({ data, screen }) {
   const [datasets, setDataSets] = useState()
   const [categories, setCategories] = useState(['Water', 'Energy', 'Internet']) // mortgage removed
   const [year, setYear] = useState(new Date().getFullYear())

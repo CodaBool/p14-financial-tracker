@@ -1,3 +1,5 @@
+'use client'
+
 import Spinner from 'react-bootstrap/Spinner'
 import { signIn } from 'next-auth/react'
 
