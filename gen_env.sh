@@ -2,12 +2,12 @@
 # This is an automated script to help with creating the .env file
 
 # these lines setup the mongo connection uri
-MONGO_PASS=$(echo $RANDOM | md5sum | head -c 20; echo;)
+MONGO_PASS=$(openssl rand -base64 30)
 mongoStartLine="mongodb+srv://root:"
 mongoEndLine="@localhost:27017/finances?retryWrites=true&w=majority"
 
 # this creates a next-auth secret which secures the authentication of the app
-AUTH_SECRET=$(echo $RANDOM | md5sum | head -c 20; echo;)
+AUTH_SECRET=$(openssl rand -base64 30)
 
 # allows user input for allow listed emails
 read -p "Enter a comma seperated list of emails to allow signup access (example@email.com,another@email.com): " allowList

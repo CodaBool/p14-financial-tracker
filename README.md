@@ -1,15 +1,12 @@
 > Live sample viewable [here](http://p14.codabool.com)
 # About
 This is a self-host financial tracker. Ideal for single goal tracking with multiple people involved making contributions.
-The app is built using Next.js, Mongodb and uses next-auth for authentication. Authentication tokens by default expire after a year to allow long sessions.
+The app is built using Next.js, Mongodb and uses next-auth for authentication.
 
 Open Source and free. Own your own data, and secure it with login based authentication. Deploy it yourself locally or use the Vercel platform combined with MongoDB Atlas.
 
-# 🖊️ Details
-> I have written a post about why and how this was created [here](https://codabool.com/blog/18)
-
 # Self-host
-This project can be self-hosted for use. Follow the steps below
+This project can be self-hosted! Follow the steps below:
 
 ## Requirements
 - node
@@ -19,6 +16,10 @@ This project can be self-hosted for use. Follow the steps below
 ## Clone the project
 
 > `git clone https://github.com/CodaBool/p14-financial-tracker.git`
+
+## Install Dependencies
+
+> `pnpm install`
 
 ## Create an .env file and fill all fields
 
@@ -46,13 +47,24 @@ skip if you wish to use Mongo Atlas for your database
 ## Ensure it is running
 > `docker ps`
 
-## Install packages
-> `npm install`
-
 ## Start the app
-> `npm start`
+> `npm run build && npm start`
 
-# 2022 Update
+# Use free Tiers
+you can deploy this to cloud infrastructure under the free tiers of both Vercel and MongoDB Atlas.
+Fork the project and import it into your Vercel account (can use Github Oauth).
+Then start a MongoDB cluster and set your connection URI in Vercel as an environment variable.
+Set the other three required environment variables of:
+
+```
+NEXTAUTH_SECRET=
+NEXTAUTH_URL=http://your_vercel_domain.com
+MONGO_URI=mongodb+srv://root:password@stat.e1io2.mongodb.net/anythingHere?retryWrites=true&w=majority
+ALLOWLISTED_EMAILS=commaSeperated@email.com,another@email.com
+```
+
+# Updates
+#### 2022
 +easy editing of any row data
 
 +new Detailed view for all categories
@@ -61,18 +73,22 @@ skip if you wish to use Mongo Atlas for your database
 
 +reordered the input row to the top
 
-# 2023 Update
+#### 2023 Q1
 +can select year in the detail page
 
 +can see percentage in the doughnut chart
 
 +all packages updated to latest
 
-+removed a couple dependencies in favor of naitive browser functions (axios, nookies, timeago.js, next-connect)
++removed a couple dependencies in favor of native browser functions (axios, nookies, timeago.js, next-connect)
 
 +added SWR which makes data fetching much nicer
 
+#### 2023 Q3
++completely rewritten in a new styling (goodbye bootstrap!)
 
-# ☀️ Solar Tab added
++now using tailwind
 
-![Screenshot 2023-07-18 205522](https://github.com/CodaBool/p14-financial-tracker/assets/61724833/711f159d-d8e9-4b29-a313-7da2fe97e8f6)
++now using next.js 13 app directory
+
++solar tab

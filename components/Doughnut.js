@@ -1,11 +1,9 @@
 'use client'
-
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import { Doughnut } from 'react-chartjs-2'
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js'
-import { Percent } from 'react-bootstrap-icons'
-import { Load } from './Load'
-import { color_1, color_2 } from '@/constants'
+import { Skeleton } from './ui/skeleton'
+// import { color_1, color_2 } from '@/constants'
 
 ChartJS.register(ArcElement, Tooltip, Legend)
 
@@ -52,7 +50,9 @@ export default function DoughnutChart({ data }) {
     if (data) genChart()
   }, [data])
 
-  if (!chartData) return <Load />
+  if (!chartData) return (
+    <Skeleton className="mx-auto rounded-full w-80 h-80" />
+  )
 
   function genChart() {
     if (data.length == 0) return
@@ -84,7 +84,7 @@ export default function DoughnutChart({ data }) {
 
   return (
     <>
-      <h1 className=" text-center" style={{fontWeight: '1'}}><Percent className="ms-2 mb-2" size={30}/> Given</h1>
+      <h1 className="mb-4 font-bold text-center">% Given</h1>
       <Doughnut data={chartData} options={options} style={{margin: 'auto'}} />
     </>
   )

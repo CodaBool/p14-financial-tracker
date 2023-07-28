@@ -1,12 +1,7 @@
-'use client'
-// import Navigation from '@/components/Navigation'
-import { Container } from 'react-bootstrap'
-
-export default function layout({children}) {
+export default function AuthLayout({ children }) {
   return (
-    <>
-      {/* <Navigation /> */}
-      <Container>{children}</Container>
-    </>
+    <div className="p-5">
+      {children}
+    </div>
   )
 }

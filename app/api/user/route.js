@@ -1,5 +1,6 @@
-import { User } from '@/models'
-import dbConnect from '@/util/db'
+import { User } from '@/lib/models'
+import dbConnect from '@/lib/db'
+import { hashSync, genSaltSync } from 'bcryptjs'
 
 export async function POST(req) {
   try {
@@ -9,26 +10,26 @@ export async function POST(req) {
     let arr = allowedList.split(',') || []
     arr = arr.map(email => email.toLowerCase())
     const allowed = arr.includes(body.email.toLowerCase())
-    if (!allowed) throw 'Email not on allow list'
+    if (!allowed) throw 'allowlist'
+    const hash = hashSync(body.password, genSaltSync(10))
     await User.create({
       email: body.email,
-      password: body.password,
+      password: hash,
       alias: body.alias
     })
-      .then(resp => {
-        if (resp.code === 11000) throw 'User already exists'
-        res.status(200).json(resp)
-      })
-      .catch(err => {
-        if (err.code === 11000) throw 'User already exists'
-        console.log(err)
-        throw err._message
-      })
+    return Response.json({created: true})
   } catch (err) {
+    console.log(err)
     if (typeof err === 'string') {
-      return new Response(err, { status: 400 })
+      return Response.json({err}, { status: 400 })
+    } else if (err?.errors?.password?.kind === "minlength") {
+      return Response.json({err: "minlength"}, { status: 400 })
+    } else if (err?.code === 11000) {
+      return Response.json({err: "dup"}, { status: 400 })
+    } else if (typeof err?.message === "string") {
+      return Response.json({err: err.message}, { status: 500 })
     } else {
-      return new Response(err, { status: 500 })
+      return Response.json(err, { status: 500 })
     }
   }
 }

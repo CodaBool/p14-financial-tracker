@@ -1,19 +1,29 @@
 import './globals.css'
-import 'bootstrap/dist/css/bootstrap.min.css'
+import { Anek_Bangla } from 'next/font/google'
 import Provider from '@/components/Provider'
-import Navigation from '@/components/Navigation'
+
+// Albert Sans
+// Aleo
+// Anek Bangla
+// Cabin
+// DM Sans
+// Dosis
 
 export const metadata = {
-  title: 'Financial Tracker',
-  description: 'Selfhost solution to view details for your own personal finances',
+  title: 'Financial tracker',
+  description: 'Self host solution to managing and monitoring bills',
 }
+import { Toaster } from "@/components/ui/toaster"
+
+const inter = Anek_Bangla({ subsets: ['latin'] })
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>
+      <body >
         <Provider>
-          <Navigation />
+          <Toaster />
+          {/* <Navigation /> */}
           {children}
         </Provider>
       </body>

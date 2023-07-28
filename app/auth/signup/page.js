@@ -1,196 +1,141 @@
 'use client'
+import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
+import { IoIosMail, IoIosKey, IoIosPerson, IoMdHappy } from 'react-icons/io'
+import { VscLoading } from 'react-icons/vsc'
+import { useRouter, useSearchParams } from 'next/navigation'
+import { Controller, useForm } from "react-hook-form"
+import { useState } from "react"
+import { signIn, useSession } from "next-auth/react"
+import Link from "next/link"
+import { useToast } from "@/components/ui/use-toast"
+import { Label } from "@/components/ui/label"
+import { cn } from "@/lib/utils"
 
-import React, { useState } from 'react'
-import { useForm, Controller } from 'react-hook-form'
-import bcrypt from 'bcryptjs'
-import { Envelope, Key, Person } from 'react-bootstrap-icons'
-import Form from 'react-bootstrap/Form'
-import Button from 'react-bootstrap/Button'
-import Row from 'react-bootstrap/Row'
-import { useRouter } from 'next/navigation'
-import { signIn, useSession } from 'next-auth/react'
-import { Load } from '@/components/Load'
-import Toast from '@/components/Toast'
-
-export default function Signup() {
-  const [password, setPassword] = useState('')
-  const [submitting, setSubmitting] = useState(false)
-  const { data: session, status } = useSession()
-  const [success, setSuccess] = useState(false)
-  const [show, setShow] = useState(false)
-  const [allow, setAllow] = useState(false)
-  const { handleSubmit, formState: { errors }, control, getValues, setError } = useForm()
+export default function Home() {
+  const { handleSubmit, formState: { errors }, control } = useForm()
+  const { toast } = useToast()
+  const { data: session } = useSession()
+  const searchParams = useSearchParams()
+  const callbackUrl = searchParams.get("callbackUrl")
   const router = useRouter()
+  const [submitting, setSubmitting] = useState()
+  const [success, setSuccess] = useState()
 
-  const onSubmit = (data) => {
-    if (!data.email) {
-      setError("email", {
-        type: "manual",
-        message: "No Email Provided"
-      })
-      return
-    } else if (!data.alias) {
-      setError("alias", {
-        type: "manual",
-        message: "No Alias Provided"
-      })
-      return
-    } 
-    setSubmitting(true)
-    // console.log(data)
-      bcrypt.hash(data.password, 10, (err, hash) => {
-        fetch('/api/user', 
-          { 
-            method: 'POST', 
-            body: JSON.stringify({
-              email: data.email,
-              password: hash,
-              alias: data.alias
-            }) 
-          }
-        )
-          .then((res) => {
-            // console.log('success', res.data)
-            setSuccess(true)
-            signIn('credentials', {
-              email: data.email,
-              password: data.password,
-              callbackUrl: ''
-            })
-          })
-          .catch((err) => {
-            if (!err.response.data.msg) {
-              console.error(err)
-              return
-            }
-            console.error(err.response.data.msg)
-            if (err.response.data.msg.includes('already exists')) {
-              setShow(true)
-            } else if (err.response.data.msg.includes('Email not on allow list')) {
-              setAllow(true)
-            }
-          })
-        .finally(() => setSubmitting(false))
-      })
+  if (session) {
+    console.log("should never get this if first signing up")
+    router.push('/')
+    return <h1 className="container text-4xl font-light text-center mt-52"><VscLoading className="inline mb-3 mr-5 animate-spin" size=".8em" />Redirecting</h1>
   }
 
-  if (session) router.push('/')
+  if (success) {
+    // redirect should not be necessary here, but to prevent soft lock best to be safe
+    setTimeout(() => router.push('/'), 8000)
+    return <h1 className="container text-4xl font-light text-center mt-52"><IoMdHappy className="inline mb-2 mr-3 animate-bounce" size="1.2em" />Account Created</h1>
+  }
+
+  function onSubmit(data) {
+    setSubmitting(true)
+    fetch("/api/user", {
+      method: 'POST', 
+      body: JSON.stringify({
+        email: data.email,
+        password: data.password,
+        alias: data.alias
+      })
+    })
+    .then(res => res.json())
+    .then(res => {
+      if (res.err) throw res.err
+      if (!res.created) throw "could not create"
+      setSuccess(true)
+      signIn('credentials', {
+        email: data.email,
+        password: data.password,
+        callbackUrl: callbackUrl || '/'
+      })
+    })
+    .catch(err => {
+     let description = 'Invalid Signup'
+      if (err === "allowlist") {
+        description = 'This email is not present on the allowlist, contact the site administrator for assistance'
+      } else if (err === "dup") {
+        description = 'This email is already registered'
+      } else { // 500
+        console.error(err)
+      }
+      toast({
+        variant: "destructive",
+        title: "Uh oh! Something went wrong.",
+        description,
+      })
+    })
+    .finally(() => setSubmitting(false))
+  }
 
   return (
-    <>
-      <h1 className="display-3 mt-3">Sign Up</h1>
-      <Form onSubmit={handleSubmit(onSubmit)}>
-        <Envelope className="me-3 mb-2" size={30} />
-        <Form.Label>Email</Form.Label>
+    <div className="container gridw-full max-w-md items-center gap-1.5">
+      <h1 className="mb-5 text-6xl font-light">Sign Up</h1>
+      <form onSubmit={handleSubmit(onSubmit)} className="space-y-8">
+        <Label className={cn(errors.email && "text-destructive", "text-2xl")}>
+          <IoIosMail className="inline mb-1 me-2" size="1.4em" />Email
+        </Label>
         <Controller
-          render={({ field }) => <Form.Control {...field} type="email" placeholder="name@example.com" />}
+          render={({ field }) => <Input placeholder="your@email.com" type="email" className="mt-0" {...field} />}
+          rules={{ required: true }}
           control={control}
           name="email"
-          defaultValue=""
-          
-          required
-          rules={{
-            validate: () => {
-              if (
-                !/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/.test(
-                  getValues('email')
-                )
-              )
-                return false
-            }
-          }}
         />
-        {errors.email && (
-          <p className="text-center mt-2 errMsg">
-            Please enter a valid email
-          </p>
-        )}
-        <Person className="me-3 mb-2" size={30} />
-        <Form.Label>Alias</Form.Label>
+        {errors.email 
+          &&  <p className="text-sm font-medium text-destructive">
+                Please enter a valid email
+              </p>
+        }
+
+        <div className="mt-2"></div>
+        <Label className={cn(errors.alias && "text-destructive", "text-2xl")}>
+          <IoIosPerson className="inline mb-1 me-2" size="1.4em" />Alias
+        </Label>
         <Controller
-          render={({ field }) => <Form.Control {...field} placeholder="Alias" />}
+          render={({ field }) => <Input placeholder="alias" className="mt-0" {...field} />}
+          rules={{ required: true }}
           control={control}
           name="alias"
-          defaultValue=""
-          required
         />
-        {errors.alias && (
-          <p className="text-center mt-2 errMsg">
-            Please enter a valid alias
-          </p>
-        )}
-        <Key className="me-3 mb-1" size={30} />
-        <Form.Label>Password</Form.Label>
+        {errors.alias 
+          &&  <p className="text-sm font-medium text-destructive">
+                Please enter an alias
+              </p>
+        }
+
+        <div className="mt-2"></div>
+        <Label className={cn(errors.password && "text-destructive", "text-2xl")}>
+          <IoIosKey className="inline mb-1 me-2" size="1.4em" />Password
+        </Label>
         <Controller
-          render={({ field }) => <Form.Control {...field} type="password" placeholder="Password" />}
+          render={({ field }) => <Input placeholder="*********" type="password" {...field} />}
+          rules={{ required: true, minLength:8 }}
           control={control}
           name="password"
-          
-          defaultValue=""
-          required
-          rules={{
-            minLength: 8 // sets rule pass >= 8
-          }}
         />
-        {errors?.password && (
-          <p className="errMsg">Your password must be at least 8 characters</p>
-        )}
-        <Key className="me-3 mb-1" size={30} />
-        <Form.Label>Confirm Password</Form.Label>
-        <Controller
-          render={({ field }) => <Form.Control {...field} type="password" placeholder="Confirm Password" />}
-          control={control}
-          name="confirmPass"
-          
-          defaultValue=""
-          required
-          rules={{
-            validate: () => {
-              return getValues('password') === getValues('confirmPass')
-            }
-          }}
-        />
-        {errors.confirmPass && (
-          <p className="errMsg">Your password must match</p>
-        )}
-        <Row>
-          {submitting 
-            ? <Load />
-            : <Button
-                className="mx-auto my-5"
-                style={{ width: '97.3%' }}
-                variant="primary"
-                type="submit"
-              >
-                Sign Up
-              </Button>
+        {errors.password 
+          &&  <p className="text-sm font-medium text-destructive">
+                Your password must be at least 8 characters
+              </p>
+        }
+
+        <Button disabled={submitting} className="w-full mt-5" >
+          {submitting
+            ? <><VscLoading className="h-4 mr-5 animate-spin" />Please Wait</>
+            : "Login"
           }
-        </Row>
-      </Form>
-      <div style={{ position: 'fixed', top: '120px', right: '20px' }}>
-        <Toast
-          show={show}
-          setShow={setShow}
-          title="Email Taken"
-          error
-          body={
-            <h5 className="text-danger">
-              An account already exists with that Email Address.
-            </h5>
-          }
-        />
-        <Toast
-          show={allow}
-          setShow={setAllow}
-          title="Email Not on the Allow List"
-          error
-          body={
-            <h5 className="">
-              Please contact the admin to be placed on the allowlist.
-            </h5>
-          }
-        />
-      </div>
-    </>
+        </Button>
+        <Link className="w-full text-blue-800" href="/auth/signin" passHref>
+          <Button variant="ghost" className="w-full mt-5">
+            Already have an account? Sign in.
+          </Button>
+        </Link>
+      </form>
+    </div>
   )
 }
