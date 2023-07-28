@@ -1,5 +1,5 @@
 import './globals.css'
-import { Anek_Bangla } from 'next/font/google'
+// import { Anek_Bangla } from 'next/font/google'
 import Provider from '@/components/Provider'
 
 // Albert Sans
@@ -15,7 +15,7 @@ export const metadata = {
 }
 import { Toaster } from "@/components/ui/toaster"
 
-const inter = Anek_Bangla({ subsets: ['latin'] })
+// const inter = Anek_Bangla({ subsets: ['latin'] })
 
 export default function RootLayout({ children }) {
   return (

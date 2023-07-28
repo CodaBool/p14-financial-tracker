@@ -133,7 +133,11 @@ export default function History({originalData}) {
       if (cell.column.id === "actions") continue
       if (cell.column.id === "by") continue
       if (cell.column.id === "date") {
-        body.date = tmpDate[0]
+        if (tmpDate) {
+          body.date = tmpDate[0]
+        } else {
+          body.date = cell.getValue()
+        }
       } else {
         body[cell.column.id] = cell.getValue()
       }
